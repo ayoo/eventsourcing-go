@@ -2,7 +2,7 @@ package main
 
 import "errors"
 
-type EventProcessor interface {
+type EventAction interface {
 	Process() (*BankAccount, error)
 }
 
