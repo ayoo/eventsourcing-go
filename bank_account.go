@@ -11,7 +11,7 @@ type BankAccount struct {
 	Balance int
 }
 
-// FetchAccount - fetch bank account by id from Redis
+// GetAccount - fetch bank account by id from Redis
 // returns BankAccount, error
 func GetAccount(id string) (*BankAccount, error) {
 	cmd := Redis.HGetAll(id)

@@ -15,14 +15,12 @@ func initRedis() *redis.Client {
 		redisUrl = "127.0.0.1:6379"
 	}
 	return redis.NewClient(&redis.Options{
-		Addr : redisUrl,
+		Addr:     redisUrl,
 		Password: "",
-		DB: 0,
+		DB:       0,
 	})
 }
 
 func main() {
-
+	mainProducer()
 }
-
-

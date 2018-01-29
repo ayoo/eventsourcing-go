@@ -43,3 +43,31 @@ func NewCreateAccountEvent(name string) CreateEvent {
 	event.AccName = name
 	return *event
 }
+
+// NewDepositEvent func
+func NewDepositEvent(id string, amt int) DepositEvent {
+	event := new(DepositEvent)
+	event.Type = "DepositEvent"
+	event.AccID = id
+	event.Amount = amt
+	return *event
+}
+
+//NewWithdrawEvent func
+func NewWithdrawEvent(id string, amt int) WithdrawEvent {
+	event := new(WithdrawEvent)
+	event.Type = "WithdrawEvent"
+	event.AccID = id
+	event.Amount = amt
+	return *event
+}
+
+// NewTransferEvent func
+func NewTransferEvent(id string, targetId string, amt int) TransferEvent {
+	event := new(TransferEvent)
+	event.Type = "TransferEvent"
+	event.AccID = id
+	event.Amount = amt
+	event.TargetID = targetId
+	return *event
+}
