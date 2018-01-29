@@ -36,6 +36,8 @@ func mainProducer() {
 				if amount, err := strconv.Atoi(args[2]); err == nil {
 					event := NewDepositEvent(accId, amount)
 					sendMsg(producer, event)
+				} else {
+					fmt.Println("Only specify deposit###Account ID###amount")
 				}
 			}
 
